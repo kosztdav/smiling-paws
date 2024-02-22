@@ -1,0 +1,12 @@
+.menuBar {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	background-color: #e8e8e8;
+}
+
+.link {
+	margin-bottom: 10px;
+	text-decoration: none;
+	color: black;
+}

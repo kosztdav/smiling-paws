@@ -1,0 +1,24 @@
+.appContainer {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+.header {
+	width: 100%;
+}
+
+.mainContent {
+	display: flex;
+	flex-grow: 1;
+}
+
+.menuBar {
+	flex: 0 0 200px;
+	height: 100%;
+}
+
+.content {
+	flex-grow: 1;
+	overflow-y: auto;
+}
