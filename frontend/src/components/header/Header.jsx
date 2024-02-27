@@ -3,7 +3,7 @@ import './Header.css';
 
 const Header = () => (
 	<div className="header">
-		<h1>Mosolygó mancsok</h1>
+		<h1>Mosolygó mancsok	 medoxid</h1>
 		<LanguageSelector />
 	</div>
 );
