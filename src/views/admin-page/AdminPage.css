@@ -1,0 +1,106 @@
+.adminPage {
+	max-width: 600px;
+	margin: auto;
+	padding: 20px;
+	background-color: #f9f9f9;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+	h2 {
+		text-align: center;
+		color: #333;
+	}
+
+	h4 {
+		margin-bottom: 20px;
+		color: #666;
+	}
+
+	label {
+		display: block;
+		margin-top: 20px;
+		color: #333;
+	}
+
+	input {
+		width: 100%;
+		padding: 8px;
+		margin-top: 5px;
+		box-sizing: border-box;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+	}
+
+	button {
+		background-color: #007bff;
+		color: white;
+		padding: 10px 20px;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		margin-top: 20px;
+		display: block;
+	}
+
+	button:hover {
+		background-color: #0056b3;
+	}
+
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		margin-top: 30px;
+	}
+
+	th,
+	td {
+		text-align: left;
+		padding: 8px;
+		border-bottom: 1px solid #ddd;
+	}
+
+	th {
+		background-color: #f2f2f2;
+	}
+
+	td button {
+		margin-right: 10px;
+		padding: 5px 10px;
+		font-size: 0.8rem;
+	}
+
+	.deleteButton {
+		background-color: #dc3545;
+	}
+
+	.deleteButton:hover {
+		background-color: #c82333;
+	}
+
+	.modifyButton {
+		background-color: #ffc107;
+	}
+
+	.modifyButton:hover {
+		background-color: #e0a800;
+	}
+
+	.edit-dialog {
+		width: 350px;
+		border: solid 1px #000;
+		border-radius: 5px;
+		padding: 20px;
+	}
+	.edit-dialog menu {
+		display: flex;
+		justify-content: space-between; /* Adjusts the space between the buttons */
+		padding: 0;
+		border: none;
+		background: transparent;
+		margin-top: 20px; /* Adds some space above the buttons */
+	}
+
+	.edit-dialog button {
+		flex: 1; /* Makes the buttons share the available space */
+		margin: 0 5px; /* Adds a little space between the buttons */
+	}
+}
