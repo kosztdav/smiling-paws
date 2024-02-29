@@ -15,6 +15,9 @@ const MenuBar = () => (
 		<Link to="/kapcsolat" className="link">
 			Kapcsolat
 		</Link>
+		<Link to="/admin" className="link">
+			Admin
+		</Link>
 	</div>
 );
 
