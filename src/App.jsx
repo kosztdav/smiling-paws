@@ -13,15 +13,15 @@ const App = () => (
 		<Header />
 		<div className="mainContent">
 			<MenuBar />
-			<div className="content">
-				<Routes>
-					<Route path="/" element={<HomePage />} />
-					<Route path="/foglalkozasok" element={<TrainingsPage />} />
-					<Route path="/hazirend" element={<PolicyPage />} />
-					<Route path="/kapcsolat" element={<ContactPage />} />
-					<Route path="/admin" element={<AdminPage />} />
-				</Routes>
-			</div>
+		</div>
+		<div className="content">
+			<Routes>
+				<Route path="/" element={<HomePage />} />
+				<Route path="/foglalkozasok" element={<TrainingsPage />} />
+				<Route path="/hazirend" element={<PolicyPage />} />
+				<Route path="/kapcsolat" element={<ContactPage />} />
+				<Route path="/admin" element={<AdminPage />} />
+			</Routes>
 		</div>
 	</div>
 );

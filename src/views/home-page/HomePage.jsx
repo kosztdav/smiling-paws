@@ -1,8 +1,9 @@
+import AboutUs from '../../components/about-us/AboutUs';
 import './HomePage.css';
 
 const HomePage = () => (
 	<div className="homePage">
-		<h2>HomePage</h2>
+		<AboutUs></AboutUs>
 	</div>
 );
 
