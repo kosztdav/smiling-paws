@@ -3,8 +3,8 @@ import './AboutUs.css';
 const AboutUs = () => {
 	return (
 		<div className="aboutUsContainer">
-			<img className="aboutUsUpperDivider" src="../assets/about-us/about-us-upper-divider.png" alt="" />
-			<img className="aboutUsImg" src="../assets/about-us/about-us-img.png" alt="" />
+			<img className="aboutUsUpperDivider" src="/assets/about-us/about-us-upper-divider.png" alt="" />
+			<img className="aboutUsImg" src="/assets/about-us/about-us-img.png" alt="" />
 			<div className="aboutUsText">
 				<h2 className="aboutUsTitle">Bemutatkozás</h2>
 				<p>

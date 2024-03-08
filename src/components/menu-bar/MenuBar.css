@@ -1,11 +1,12 @@
 .menuBar {
+	align-items: center;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	justify-content: center;
 	padding: 20px;
 	backdrop-filter: blur(8px);
 	background-color: #8d8c8c7b;
+	height: 100%;
 }
 
 .link {
