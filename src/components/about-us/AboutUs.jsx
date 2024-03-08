@@ -3,8 +3,12 @@ import './AboutUs.css';
 const AboutUs = () => {
 	return (
 		<div className="aboutUsContainer">
-			<img className="aboutUsUpperDivider" src="/assets/about-us/about-us-upper-divider.png" alt="" />
-			<img className="aboutUsImg" src="/assets/about-us/about-us-img.png" alt="" />
+			<div className="upperDividerContainer">
+				<img className="aboutUsUpperDivider" src="/assets/about-us/about-us-upper-divider.png" alt="" />
+			</div>
+			<div className="imageContainer">
+				<img className="aboutUsImg" src="/assets/about-us/about-us-img.png" alt="" />
+			</div>
 			<div className="aboutUsText">
 				<h2 className="aboutUsTitle">Bemutatkozás</h2>
 				<p>
@@ -20,7 +24,9 @@ const AboutUs = () => {
 					mattis. Mauris hendrerit euismod dolor, vitae.
 				</p>
 			</div>
-			<img className="aboutUsLowerDivider" src="../assets/about-us/about-us-lower-divider.png" alt="" />
+			<div className="lowerDividerContainer">
+				<img className="aboutUsLowerDivider" src="../assets/about-us/about-us-lower-divider.png" alt="" />
+			</div>
 		</div>
 	);
 };
