@@ -1,12 +1,11 @@
+
 .appContainer {
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
 }
 
-.header {
-	width: 100%;
-}
+
 
 .mainContent {
 	display: flex;

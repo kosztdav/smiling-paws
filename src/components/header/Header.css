@@ -1,7 +1,84 @@
 .header {
+	margin: -10px 0 0 -10px;
+	width: 100%;
+}
+
+.hero {
+	width: 100vw;
+}
+
+.hero img {
+	width: 100vw;
+}
+
+.heroBookmark {
+	background-color: hsl(60, 100%, 50%);
+	padding: 5px 80px 3px 40px;
+	font-size: 38px;
+	position: absolute;
+	width: 200px;
+	height: 49px;
+	top: 481px;
+	left: 271px;
+	display: flex;
+	gap: 15%;
+	align-items: center;
+	color: black;
+	border-radius: 60px;
+	cursor: pointer;
+}
+.heroBookmark:hover{
+	background-color: hsl(60, 100%, 70%);
+}
+
+.hero-text {
+	position: absolute;
+	color: white;
+	top: 400px;
+	left: 277px;
+}
+
+h1 {
+	position: absolute;
+	top: 200px;
+	font-size: 70px;
+	color: white;
+	left: 271px;
+}
+
+.p-header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	background-color: #f0f0f0;
 	padding: 10px 20px;
+}
+
+.selector {
+	position: absolute;
+	width: 3vw;
+	height: 1vw;
+	top: 2vw;
+	left: 95vw;
+}
+
+.title {
+	position: absolute;
+	width: 100vw;
+}
+
+.title img {
+	width: 10px;
+	height: 61px;
+}
+
+.wawes {
+	position: absolute;
+	width: 100vw;
+	top: 63vw;
+}
+
+.wawes img {
+	height: 91px;
+	top: 920px;
 }
