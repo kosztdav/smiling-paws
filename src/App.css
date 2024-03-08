@@ -12,7 +12,6 @@ body {
 .appContainer {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: 10% 90%;
 	height: 100vh;
 }
 
