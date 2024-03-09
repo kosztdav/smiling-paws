@@ -1,16 +1,37 @@
 .menuBar {
 	align-items: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	padding: 20px;
 	backdrop-filter: blur(8px);
 	background-color: #8d8c8c7b;
-	height: 100%;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: center;
+	padding: 1.5vw;
 }
 
 .link {
-	margin-bottom: 10px;
+	align-items: center;
+	border-bottom: 1px solid #c7c8cc;
+	color: #e8e8ea;
+	display: flex;
+	justify-content: center;
+	padding: 1rem 0 1rem 0;
 	text-decoration: none;
-	color: black;
+	width: 100%;
+}
+
+.link:first-child {
+	border: none;
+	margin-bottom: auto;
+}
+
+.link:nth-child(2) {
+	border-top: 1px solid #c7c8cc;
+}
+
+.link:last-child {
+	border: none;
+	border-top: 1px solid #c7c8cc;
+	margin-top: auto;
+	padding-bottom: 0;
 }
