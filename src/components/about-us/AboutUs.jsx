@@ -9,8 +9,8 @@ const AboutUs = () => {
 			<div className="imageContainer">
 				<img className="aboutUsImg" src="/assets/about-us/about-us-img.png" alt="" />
 			</div>
+			<h2 className="aboutUsTitle">Bemutatkozás</h2>
 			<div className="aboutUsText">
-				<h2 className="aboutUsTitle">Bemutatkozás</h2>
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et purus et lacus ultrices dapibus. Praesent tincidunt volutpat lectus rutrum
 					elementum. Suspendisse cursus pharetra mattis. Mauris hendrerit euismod dolor, vitae.

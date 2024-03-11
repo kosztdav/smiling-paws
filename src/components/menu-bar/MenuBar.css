@@ -9,13 +9,23 @@
 	padding: 1.5vw;
 }
 
+.logoContainer {
+	max-width: 70px;
+	width: 4em;
+}
+
+.logo {
+	height: auto;
+	width: 100%;
+}
+
 .link {
 	align-items: center;
 	border-bottom: 1px solid #c7c8cc;
 	color: #e8e8ea;
 	display: flex;
 	justify-content: center;
-	padding: 1rem 0 1rem 0;
+	padding: 1em 0 1em 0;
 	text-decoration: none;
 	width: 100%;
 }
@@ -23,6 +33,8 @@
 .link:first-child {
 	border: none;
 	margin-bottom: auto;
+	max-width: 70px;
+	width: 4em;
 }
 
 .link:nth-child(2) {

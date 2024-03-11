@@ -2,6 +2,8 @@
 	background-color: #f2efe5;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 10% 90%;
+	overflow: hidden;
 	position: relative;
 	z-index: 1;
 }
@@ -13,7 +15,8 @@
 
 .imageContainer {
 	grid-column: 1;
-	grid-row: 1;
+	grid-row: 1/3;
+	min-height: 100%;
 	position: relative;
 	z-index: 1;
 }
@@ -23,29 +26,40 @@
 	color: #b4b4b8;
 	display: flex;
 	flex-direction: column;
-	gap: 5%;
+	gap: 2.5em;
 	grid-column: 2;
-	grid-row: 1;
-	height: 70%;
+	grid-row: 2;
+	height: 100%;
 	justify-content: flex-start;
-	margin: auto;
-	margin-top: 10%;
-	margin-left: 10%;
+	margin: 4em 0 4em 4rem;
 	position: relative;
-	width: 50%;
-	z-index: 1;
+	width: 24em;
+	z-index: 3;
+}
+
+.aboutUsText p {
+	align-items: center;
+	display: flex;
 }
 
 .aboutUsTitle {
+	align-items: center;
 	color: #808083;
-	font-size: 2.4vw;
+	display: flex;
+	font-size: 2em;
 	font-weight: bold;
+	grid-column: 2;
+	grid-row: 1;
+	justify-content: flex-start;
+	margin: 2.5em 0 0 4rem;
+	position: relative;
+	z-index: 3;
 }
 
 .upperDividerContainer,
 .lowerDividerContainer {
 	grid-column: 1/3;
-	grid-row: 1;
+	grid-row: 1/3;
 	position: relative;
 	z-index: 2;
 }
