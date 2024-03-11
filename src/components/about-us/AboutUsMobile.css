@@ -1,0 +1,31 @@
+@media (max-width: 426px) {
+	.aboutUsImgDesktop,
+	.upperDividerContainer,
+	.lowerDividerContainer {
+		display: none;
+	}
+
+	.aboutUsImgMobile {
+		display: block;
+		height: auto;
+		width: 100%;
+	}
+
+	.aboutUsContainer {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.aboutUsTitle {
+		margin: 0;
+		align-items: center;
+		justify-content: center;
+		grid-row: 2;
+		z-index: 1;
+	}
+
+	.aboutUsText {
+		grid-row: 3;
+		z-index: 1;
+	}
+}

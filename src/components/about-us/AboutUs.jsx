@@ -1,13 +1,15 @@
 import './AboutUs.css';
+import './AboutUsMobile.css';
 
 const AboutUs = () => {
 	return (
 		<div className="aboutUsContainer">
 			<div className="upperDividerContainer">
-				<img className="aboutUsUpperDivider" src="/assets/about-us/about-us-upper-divider.png" alt="" />
+				<img className="aboutUsUpperDivider" src="/assets/about-us/desktop/about-us-upper-divider.png" alt="" />
 			</div>
 			<div className="imageContainer">
-				<img className="aboutUsImg" src="/assets/about-us/about-us-img.png" alt="" />
+				<img className="aboutUsImgDesktop" src="/assets/about-us/desktop/about-us-img.png" alt="" />
+				<img className="aboutUsImgMobile" src="assets/about-us/mobile/about-us-img.png" alt="" />
 			</div>
 			<h2 className="aboutUsTitle">Bemutatkozás</h2>
 			<div className="aboutUsText">
@@ -25,7 +27,7 @@ const AboutUs = () => {
 				</p>
 			</div>
 			<div className="lowerDividerContainer">
-				<img className="aboutUsLowerDivider" src="../assets/about-us/about-us-lower-divider.png" alt="" />
+				<img className="aboutUsLowerDivider" src="/assets/about-us/desktop/about-us-lower-divider.png" alt="" />
 			</div>
 		</div>
 	);
