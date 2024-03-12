@@ -1,7 +1,5 @@
 @media (max-width: 769px) {
-	.aboutUsImgDesktop,
-	.upperDividerContainer,
-	.lowerDividerContainer {
+	.aboutUsImgDesktop {
 		display: none;
 	}
 
@@ -18,19 +16,15 @@
 
 	.aboutUsTitle {
 		align-items: center;
-		grid-row: 2;
 		justify-content: center;
 		margin: 0;
-		z-index: 1;
 	}
 
 	.aboutUsText {
-		grid-row: 3;
 		margin: 4em auto 4em auto;
-		z-index: 1;
 	}
 
 	.aboutUsText p {
-		text-align: justify;
+		text-align: center;
 	}
 }

@@ -4,10 +4,7 @@ import './AboutUsMobile.css';
 const AboutUs = () => {
 	return (
 		<div className="aboutUsContainer">
-			<div className="upperDividerContainer">
-				<img className="aboutUsUpperDivider" src="/assets/about-us/desktop/about-us-upper-divider.png" alt="" />
-			</div>
-			<div className="imageContainer">
+			<div className="aboutUsImageContainer">
 				<img className="aboutUsImgDesktop" src="/assets/about-us/desktop/about-us-img.png" alt="" />
 				<img className="aboutUsImgMobile" src="assets/about-us/mobile/about-us-img.png" alt="" />
 			</div>
@@ -25,9 +22,6 @@ const AboutUs = () => {
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt volutpat lectus rutrum elementum. Suspendisse cursus pharetra
 					mattis. Mauris hendrerit euismod dolor, vitae.
 				</p>
-			</div>
-			<div className="lowerDividerContainer">
-				<img className="aboutUsLowerDivider" src="/assets/about-us/desktop/about-us-lower-divider.png" alt="" />
 			</div>
 		</div>
 	);
