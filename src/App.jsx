@@ -7,6 +7,7 @@ import PolicyPage from './views/policy-page/PolicyPage';
 import ContactPage from './views/contact-page/ContactPage';
 import AdminPage from './views/admin-page/AdminPage';
 import './App.css';
+import './AppMobile.css';
 
 const App = () => (
 	<div className="appContainer">
