@@ -4,7 +4,9 @@ import './MenuBar.css';
 const MenuBar = () => (
 	<div className="menuBar">
 		<Link to="/" className="link">
-			Home
+			<div className="logoContainer">
+				<img className="logo" src="assets/menu-bar/menu-bar-logo.png" alt="" />
+			</div>
 		</Link>
 		<Link to="/foglalkozasok" className="link">
 			Foglalkozások

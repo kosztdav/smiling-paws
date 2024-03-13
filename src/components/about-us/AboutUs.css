@@ -1,0 +1,51 @@
+.aboutUsContainer {
+	background-color: #f2efe5;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 10% 90%;
+}
+
+.aboutUsImgDesktop {
+	height: auto;
+	width: 100%;
+}
+
+.aboutUsImgMobile {
+	display: none;
+}
+
+.aboutUsImageContainer {
+	grid-column: 1;
+	grid-row: 1/3;
+	min-height: 100%;
+}
+
+.aboutUsText {
+	align-items: flex-start;
+	color: #b4b4b8;
+	display: flex;
+	flex-direction: column;
+	gap: 2.5em;
+	grid-column: 2;
+	grid-row: 2;
+	height: 100%;
+	justify-content: flex-start;
+	margin: 4em 0 4em 4rem;
+	width: 24em;
+}
+
+.aboutUsText p {
+	align-items: center;
+	display: flex;
+}
+
+.aboutUsTitle {
+	align-items: center;
+	color: #808083;
+	display: flex;
+	font-size: 2.5em;
+	grid-column: 2;
+	grid-row: 1;
+	justify-content: flex-start;
+	margin: 2em 0 0 4rem;
+}
