@@ -36,7 +36,7 @@
 }
 
 .link:not(:first-child):focus {
-	background-color: hsla(0, 0%, 80%, 0.5);
+	color: #ffffff;
 }
 
 .link:first-child {
@@ -49,6 +49,12 @@
 
 .link:nth-child(2) {
 	border-top: 1px solid #c7c8cc;
+	justify-content: flex-end;
+}
+
+.link:nth-child(2)::after {
+	content: '›';
+	margin-left: 3em;
 }
 
 .link:last-child {
