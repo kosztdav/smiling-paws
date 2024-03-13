@@ -6,7 +6,7 @@ const AboutUs = () => {
 		<div className="aboutUsContainer">
 			<div className="aboutUsImageContainer">
 				<img className="aboutUsImgDesktop" src="/assets/about-us/desktop/about-us-img.png" alt="" />
-				<img className="aboutUsImgMobile" src="assets/about-us/mobile/about-us-img.png" alt="" />
+				<img className="aboutUsImgMobile" src="/assets/about-us/mobile/about-us-img.png" alt="" />
 			</div>
 			<h2 className="aboutUsTitle">Bemutatkozás</h2>
 			<div className="aboutUsText">
