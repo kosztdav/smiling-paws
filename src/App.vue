@@ -1,3 +1,19 @@
+<template>
+	<div class="appContainer">
+		<SiteHeader />
+		<MenuBar />
+		<div class="content">
+			<RouterView />
+		</div>
+	</div>
+</template>
+
+<script setup>
+import SiteHeader from './components/SiteHeader.vue';
+import MenuBar from './components/MenuBar.vue';
+</script>
+
+<style>
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -37,3 +53,14 @@ body {
 	position: relative;
 	z-index: 1;
 }
+
+@media (max-width: 769px) {
+	body {
+		font-size: clamp(0.5rem, 2.6vw, 1.5rem);
+	}
+
+	.menuBar {
+		display: none;
+	}
+}
+</style>

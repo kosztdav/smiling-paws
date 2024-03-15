@@ -1,50 +1,42 @@
 import fs from 'node:fs/promises';
 import express from 'express';
-import { createServer as createViteServer } from 'vite';
-import compression from 'compression';
-import sirv from 'sirv';
-import path from 'node:path';
-import { fileURLToPath } from 'url';
-
 import { connectDB } from './config/db.js';
 import userRoutes from './api/routes/user-routes.js';
 import trainingRoutes from './api/routes/training-routes.js';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 // Constants
 const isProduction = process.env.NODE_ENV === 'production';
 const port = process.env.PORT || 5173;
 const base = process.env.BASE || '/';
 
-// Paths adjusted for the new structure
-const clientDistDir = path.resolve(__dirname, '..', 'dist', 'client');
-const templateHtmlPath = path.resolve(clientDistDir, 'index.html');
-const ssrManifestPath = path.resolve(clientDistDir, '.vite', 'ssr-manifest.json');
-
 // Cached production assets
-const templateHtml = isProduction ? await fs.readFile(templateHtmlPath, 'utf-8') : '';
-const ssrManifest = isProduction ? await fs.readFile(ssrManifestPath, 'utf-8') : undefined;
+const templateHtml = isProduction ? await fs.readFile('./dist/client/index.html', 'utf-8') : '';
+const ssrManifest = isProduction ? await fs.readFile('./dist/client/.vite/ssr-manifest.json', 'utf-8') : undefined;
 
+// Create http server
 const app = express();
 app.set('json spaces', 2);
 
 // Connect to MongoDB
 connectDB();
 
+// Add Vite or respective production middlewares
 let vite;
 if (!isProduction) {
-	vite = await createViteServer({
+	const { createServer } = await import('vite');
+	vite = await createServer({
 		server: { middlewareMode: true },
 		appType: 'custom',
 		base
 	});
 	app.use(vite.middlewares);
 } else {
+	const compression = (await import('compression')).default;
+	const sirv = (await import('sirv')).default;
 	app.use(compression());
-	app.use(base, sirv(clientDistDir, { extensions: [] }));
+	app.use(base, sirv('./dist/client', { extensions: [] }));
 }
+
 // Middleware to parse JSON bodies
 app.use(express.json());
 // My endpoints
@@ -62,7 +54,7 @@ app.use('*', async (req, res) => {
 			// Always read fresh template in development
 			template = await fs.readFile('./index.html', 'utf-8');
 			template = await vite.transformIndexHtml(url, template);
-			render = (await vite.ssrLoadModule('/src/entry-server.jsx')).render;
+			render = (await vite.ssrLoadModule('/src/entry-server.js')).render;
 		} else {
 			template = templateHtml;
 			render = (await import('./dist/server/entry-server.js')).render;

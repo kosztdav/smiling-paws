@@ -1,3 +1,20 @@
+<template>
+	<div class="menuBar">
+		<RouterLink to="/" class="link">
+			<div class="logoContainer">
+				<img class="logo" src="/assets/menu-bar/menu-bar-logo.png" alt="" />
+			</div>
+		</RouterLink>
+		<RouterLink to="/foglalkozasok" class="link">Foglalkozások</RouterLink>
+		<RouterLink to="/hazirend" class="link">Házirend</RouterLink>
+		<RouterLink to="/kapcsolat" class="link">Kapcsolat</RouterLink>
+		<RouterLink to="/admin" class="link">Admin</RouterLink>
+	</div>
+</template>
+
+<script setup></script>
+
+<style>
 .menuBar {
 	align-items: center;
 	backdrop-filter: blur(8px);
@@ -63,3 +80,4 @@
 	margin-top: auto;
 	padding-bottom: 0;
 }
+</style>

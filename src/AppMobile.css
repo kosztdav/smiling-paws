@@ -1,9 +1,0 @@
-@media (max-width: 769px) {
-	body {
-		font-size: clamp(0.5rem, 2.6vw, 1.5rem);
-	}
-
-	.menuBar {
-		display: none;
-	}
-}
