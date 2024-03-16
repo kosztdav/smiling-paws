@@ -3,6 +3,7 @@ import express from 'express';
 import { connectDB } from './config/db.js';
 import userRoutes from './api/routes/user-routes.js';
 import trainingRoutes from './api/routes/training-routes.js';
+import homeRoutes from './api/routes/home-routes.js';
 
 // Constants
 const isProduction = process.env.NODE_ENV === 'production';
@@ -39,9 +40,11 @@ if (!isProduction) {
 
 // Middleware to parse JSON bodies
 app.use(express.json());
+
 // My endpoints
 app.use('/api', userRoutes);
 app.use('/api', trainingRoutes);
+app.use('/api', homeRoutes);
 
 // Serve HTML
 app.use('*', async (req, res) => {
