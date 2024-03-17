@@ -1,5 +1,5 @@
 <template>
-	<div class="appContainer">
+	<div class="app-container">
 		<SiteHeader />
 		<MenuBar />
 		<div class="content">
@@ -14,7 +14,10 @@ import MenuBar from './components/MenuBar.vue';
 </script>
 
 <style>
-* {
+
+*,
+*::after,
+*::before {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -26,7 +29,7 @@ body {
 	line-height: 2em;
 }
 
-.appContainer {
+.app-container {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	height: 100vh;
@@ -40,7 +43,7 @@ body {
 	z-index: 1;
 }
 
-.menuBar {
+.menu-bar {
 	grid-column: 1/3;
 	grid-row: 1/3;
 	position: relative;
@@ -54,12 +57,12 @@ body {
 	z-index: 1;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
 	body {
 		font-size: clamp(0.5rem, 2.6vw, 1.5rem);
 	}
 
-	.menuBar {
+	.menu-bar {
 		display: none;
 	}
 }

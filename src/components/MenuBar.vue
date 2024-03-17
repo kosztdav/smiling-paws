@@ -1,7 +1,7 @@
 <template>
-	<div class="menuBar">
+	<div class="menu-bar">
 		<RouterLink to="/" class="link">
-			<div class="logoContainer">
+			<div class="logo-container">
 				<img class="logo" src="/assets/menu-bar/menu-bar-logo.png" alt="" />
 			</div>
 		</RouterLink>
@@ -15,7 +15,7 @@
 <script setup></script>
 
 <style>
-.menuBar {
+.menu-bar {
 	align-items: center;
 	backdrop-filter: blur(8px);
 	background-color: #8d8c8c7b;
@@ -26,7 +26,7 @@
 	padding: 1em 1em 0.5em 1em;
 }
 
-.logoContainer {
+.logo-container {
 	max-width: 70px;
 	width: 4em;
 }
@@ -48,11 +48,8 @@
 	width: 100%;
 }
 
-.link:not(:first-child):hover {
-	color: #ffffff;
-}
-
-.link:not(:first-child):focus {
+.link:not(:first-child):hover ,
+.link:not(:first-child):focus{
 	color: #ffffff;
 }
 

@@ -2,7 +2,7 @@
 	<div v-if="appState == APP_STATES.TEMPLATE" class="editable-area">
 		<div ref="content" class="content-text" v-html="model.htmlContent"></div>
 		<svg
-			v-if="isAdmin"
+			v-if="isAdmin && !isMobile"
 			class="edit-icon feather feather-edit"
 			fill="none"
 			height="24"
@@ -42,6 +42,7 @@
 import { onMounted, reactive, ref } from 'vue';
 import { useTemplateApi } from '../api/template-api';
 import { useAdmin } from '../composables/admin';
+import { useDimensions } from '../composables/dimensions';
 import Editor from 'primevue/editor';
 
 const APP_STATES = {
@@ -60,6 +61,7 @@ const props = defineProps({
 
 const { getTemplate, saveTemplate } = useTemplateApi();
 const { isAdmin } = useAdmin();
+const { isMobile } = useDimensions();
 
 const appState = ref(APP_STATES.LOADING);
 const model = reactive({
@@ -108,22 +110,27 @@ onMounted(() => {
 	display: flex;
 	flex-direction: column;
 	gap: 2.5em;
-	grid-column: 2;
-	grid-row: 2;
 	height: 100%;
 	justify-content: flex-start;
-	margin: 4em 0 4em 4rem;
+	margin: 4em 0 0 4rem;
 	width: 24em;
 }
 
 .content-editor {
 	color: #b4b4b8;
+	grid-column: 2;
+	grid-row: 2;
 	margin: 4em 0 4em 4rem;
+	position: relative;
 	width: 38em;
+	z-index: 2;
 }
 
 .editable-area {
+	grid-column: 2;
+	grid-row: 2;
 	position: relative;
+	z-index: 2;	
 }
 
 .edit-icon {
@@ -143,13 +150,18 @@ onMounted(() => {
 	margin-bottom: 2em !important;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
 	.content-text {
 		margin: 4em auto 4em auto;
 	}
 
 	.content-text p {
 		text-align: center;
+	}
+
+	.editable-area{
+		grid-column: 1;
+		grid-row: 3;
 	}
 }
 </style>
