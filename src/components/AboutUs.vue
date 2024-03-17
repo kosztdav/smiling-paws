@@ -1,8 +1,8 @@
 <template>
-	<div class="aboutUsContainer">
+	<div class="about-us__container">
 		<div class="aboutUsImageContainer">
-			<img class="aboutUsImgDesktop" src="/assets/about-us/desktop/about-us-img.png" alt="" />
-			<img class="aboutUsImgMobile" src="/assets/about-us/mobile/about-us-img.png" alt="" />
+			<img class="about-us__img--desktop" src="/assets/about-us/desktop/about-us-img.png" alt="" />
+			<img class="about-us__img--mobile" src="/assets/about-us/mobile/about-us-img.png" alt="" />
 		</div>
 		<h2 class="aboutUsTitle">Bemutatkozás</h2>
 		<EditableContent template-id="about-us" />
@@ -14,19 +14,19 @@ import EditableContent from './EditableContent.vue';
 </script>
 
 <style>
-.aboutUsContainer {
+.about-us__container {
 	background-color: #f2efe5;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: 10% 90%;
 }
 
-.aboutUsImgDesktop {
+.about-us__img--desktop {
 	height: auto;
 	width: 100%;
 }
 
-.aboutUsImgMobile {
+.about-us__img--mobile {
 	display: none;
 }
 
@@ -46,6 +46,7 @@ import EditableContent from './EditableContent.vue';
 	justify-content: flex-start;
 	margin: 2em 0 0 4rem;
 }
+
 @media (max-width: 769px) {
 	.aboutUsImgDesktop {
 		display: none;
