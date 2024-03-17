@@ -1,8 +1,4 @@
-import axios from 'axios';
-
-const httpClient = axios.create({
-	baseURL: '/api'
-});
+import httpClient from './client/http-client';
 
 const getAllUsers = () => httpClient.get('/users');
 const postUser = (payload) => httpClient.post('/users', payload);

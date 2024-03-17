@@ -3,7 +3,7 @@ import express from 'express';
 import { connectDB } from './config/db.js';
 import userRoutes from './api/routes/user-routes.js';
 import trainingRoutes from './api/routes/training-routes.js';
-import homeRoutes from './api/routes/home-routes.js';
+import templateRoutes from './api/routes/template-routes.js';
 
 // Constants
 const isProduction = process.env.NODE_ENV === 'production';
@@ -44,7 +44,7 @@ app.use(express.json());
 // My endpoints
 app.use('/api', userRoutes);
 app.use('/api', trainingRoutes);
-app.use('/api', homeRoutes);
+app.use('/api', templateRoutes);
 
 // Serve HTML
 app.use('*', async (req, res) => {

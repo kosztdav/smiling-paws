@@ -2889,6 +2889,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"js-cookie@npm:3.0.5":
+  version: 3.0.5
+  resolution: "js-cookie@npm:3.0.5"
+  checksum: 10c0/04a0e560407b4489daac3a63e231d35f4e86f78bff9d792011391b49c59f721b513411cd75714c418049c8dc9750b20fcddad1ca5a2ca616c3aca4874cce5b3a
+  languageName: node
+  linkType: hard
+
 "js-tokens@npm:^4.0.0":
   version: 4.0.0
   resolution: "js-tokens@npm:4.0.0"
@@ -4106,6 +4113,7 @@ __metadata:
     eslint: "npm:8.57.0"
     eslint-plugin-vue: "npm:9.23.0"
     express: "npm:4.18.2"
+    js-cookie: "npm:3.0.5"
     mongoose: "npm:8.2.1"
     prettier: "npm:3.2.5"
     primevue: "npm:3.50.0"

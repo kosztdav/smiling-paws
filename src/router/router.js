@@ -28,7 +28,7 @@ const router = createRouter({
 		{
 			path: '/admin',
 			name: 'admin',
-			component: () => import('../pages/AdminPageEditor.vue')
+			component: () => import('../pages/AdminPage.vue')
 		}
 	]
 });
