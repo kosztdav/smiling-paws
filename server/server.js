@@ -4,6 +4,7 @@ import { connectDB } from './config/db.js';
 import userRoutes from './api/routes/user-routes.js';
 import trainingRoutes from './api/routes/training-routes.js';
 import templateRoutes from './api/routes/template-routes.js';
+import imageRoutes from './api/routes/image-routes.js';
 
 // Constants
 const isProduction = process.env.NODE_ENV === 'production';
@@ -45,6 +46,7 @@ app.use(express.json());
 app.use('/api', userRoutes);
 app.use('/api', trainingRoutes);
 app.use('/api', templateRoutes);
+app.use('/api', imageRoutes);
 
 // Serve HTML
 app.use('*', async (req, res) => {
