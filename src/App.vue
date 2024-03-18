@@ -14,7 +14,6 @@ import MenuBar from './components/MenuBar.vue';
 </script>
 
 <style>
-
 *,
 *::after,
 *::before {
@@ -24,6 +23,7 @@ import MenuBar from './components/MenuBar.vue';
 }
 
 body {
+	color: #b4b4b8;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: clamp(0.5rem, 1.1vw, 2rem);
 	line-height: 2em;
@@ -43,13 +43,6 @@ body {
 	z-index: 1;
 }
 
-.menu-bar {
-	grid-column: 1/3;
-	grid-row: 1/3;
-	position: relative;
-	z-index: 2;
-}
-
 .content {
 	grid-column: 1/13;
 	grid-row: 2;
@@ -60,10 +53,6 @@ body {
 @media (max-width: 767px) {
 	body {
 		font-size: clamp(0.5rem, 2.6vw, 1.5rem);
-	}
-
-	.menu-bar {
-		display: none;
 	}
 }
 </style>

@@ -5,12 +5,12 @@
 		</div>
 		<div class="about-us__divider-container">
 			<picture>
-				<source media="(max-width: 767px)" srcset="/assets/about-us/dividers/about-us-upper-divider-mobile.png">
-				<img class="about-us__divider" src="/assets/about-us/dividers/about-us-upper-divider.png" alt="">
+				<source media="(max-width: 767px)" srcset="/assets/about-us/dividers/about-us-upper-divider-mobile.svg" />
+				<img class="about-us__divider--upper" src="/assets/about-us/dividers/about-us-upper-divider.svg" alt="" />
 			</picture>
 			<picture>
-				<source media="(max-width: 767px)" srcset="/assets/about-us/dividers/about-us-lower-divider-mobile.png">
-				<img class="about-us__divider" src="/assets/about-us/dividers/about-us-lower-divider.png" alt="">
+				<source media="(max-width: 767px)" srcset="/assets/about-us/dividers/about-us-lower-divider-mobile.svg" />
+				<img class="about-us__divider--lower" src="/assets/about-us/dividers/about-us-lower-divider.svg" alt="" />
 			</picture>
 		</div>
 		<h2 class="about-us__title">Bemutatkozás</h2>
@@ -24,10 +24,11 @@ import EditableContent from './EditableContent.vue';
 
 <style>
 .about-us__container {
-	background-color: #F2EFE5;
+	background-color: #f2efe5;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: 10% 1fr;
+	overflow: hidden;
 	position: relative;
 	z-index: 0;
 }
@@ -49,7 +50,7 @@ import EditableContent from './EditableContent.vue';
 	overflow: hidden;
 }
 
-.about-us__divider-container{
+.about-us__divider-container {
 	display: flex;
 	flex-direction: column;
 	grid-column: 1/3;
@@ -59,9 +60,17 @@ import EditableContent from './EditableContent.vue';
 	z-index: 1;
 }
 
-.about-us__divider{
-	height: 100%;
-	width: 100%;
+.about-us__divider--upper,
+.about-us__divider--lower {
+	height: 4.5em;
+}
+
+.about-us__divider--upper {
+	vertical-align: top;
+}
+
+.about-us__divider--lower {
+	vertical-align: bottom;
 }
 
 .about-us__title {
@@ -83,15 +92,21 @@ import EditableContent from './EditableContent.vue';
 		grid-template-rows: auto;
 	}
 
-	.about-us__img-container{
+	.about-us__img-container {
 		height: auto;
 		grid-column: 1;
 		grid-row: 1;
 	}
 
-	.about-us__divider-container{
+	.about-us__divider-container {
 		grid-column: 1;
 		grid-row: 1;
+	}
+
+	.about-us__divider--upper,
+	.about-us__divider--lower {
+		height: 100%;
+		width: 100%;
 	}
 
 	.about-us__title {

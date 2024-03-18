@@ -18,12 +18,16 @@
 .menu-bar {
 	align-items: center;
 	backdrop-filter: blur(8px);
-	background-color: #8d8c8c7b;
+	background-color: #8d8c8c90;
 	display: flex;
 	flex-direction: column;
+	grid-column: 1/3;
+	grid-row: 1/3;
 	height: 100vh;
 	justify-content: center;
-	padding: 1em 1em 0.5em 1em;
+	padding: 1em 1em 0.5em;
+	position: relative;
+	z-index: 2;
 }
 
 .logo-container {
@@ -38,18 +42,18 @@
 
 .link {
 	align-items: center;
-	border-bottom: 1px solid #c7c8cc;
-	color: #aeaeaf;
+	border-bottom: 1px solid #c6c6c8;
+	color: #c6c6c8;
 	display: flex;
 	justify-content: center;
-	padding: 0.5em 0 0.5em 0;
+	padding: 0.5em 0;
 	text-decoration: none;
 	transition: 0.4s ease;
 	width: 100%;
 }
 
-.link:not(:first-child):hover ,
-.link:not(:first-child):focus{
+.link:not(:first-child):hover,
+.link:not(:first-child):focus {
 	color: #ffffff;
 }
 
@@ -76,5 +80,15 @@
 	border-top: 1px solid #c7c8cc;
 	margin-top: auto;
 	padding-bottom: 0;
+}
+
+@media (max-width: 959px) {
+	.menu-bar {
+		flex-direction: row;
+		grid-column: 1/13;
+		grid-row: 1;
+		height: 4em;
+		width: 100%;
+	}
 }
 </style>

@@ -106,7 +106,6 @@ onMounted(() => {
 <style>
 .content-text {
 	align-items: flex-start;
-	color: #b4b4b8;
 	display: flex;
 	flex-direction: column;
 	gap: 2.5em;
@@ -117,7 +116,6 @@ onMounted(() => {
 }
 
 .content-editor {
-	color: #b4b4b8;
 	grid-column: 2;
 	grid-row: 2;
 	margin: 4em 0 4em 4rem;
@@ -130,7 +128,7 @@ onMounted(() => {
 	grid-column: 2;
 	grid-row: 2;
 	position: relative;
-	z-index: 2;	
+	z-index: 2;
 }
 
 .edit-icon {
@@ -152,14 +150,14 @@ onMounted(() => {
 
 @media (max-width: 767px) {
 	.content-text {
-		margin: 4em auto 4em auto;
+		margin: 4em auto;
 	}
 
 	.content-text p {
 		text-align: center;
 	}
 
-	.editable-area{
+	.editable-area {
 		grid-column: 1;
 		grid-row: 3;
 	}
