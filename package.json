@@ -13,7 +13,6 @@
 		"preview": "cross-env NODE_ENV=production node server"
 	},
 	"dependencies": {
-		"@vitejs/plugin-vue": "4.5.2",
 		"axios": "1.6.8",
 		"compression": "1.7.4",
 		"cross-env": "7.0.3",
@@ -30,6 +29,7 @@
 	},
 	"devDependencies": {
 		"@rushstack/eslint-patch": "1.7.2",
+		"@vitejs/plugin-vue": "^5.0.4",
 		"@vue/eslint-config-prettier": "9.0.0",
 		"eslint": "8.57.0",
 		"eslint-plugin-vue": "9.23.0",

@@ -28,6 +28,7 @@
 	padding: 1em 1em 0.5em;
 	position: relative;
 	z-index: 2;
+
 }
 
 .logo-container {

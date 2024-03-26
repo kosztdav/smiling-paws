@@ -66,6 +66,7 @@ import EditableContent from './EditableContent.vue';
 }
 
 .about-us__divider--upper {
+	
 	vertical-align: top;
 }
 
